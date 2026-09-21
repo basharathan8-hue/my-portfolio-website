@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Solutions | M Basharat - AI Automation Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { amber: '#f59e0b', gold: '#fbbf24', flame: '#ff5722', rose: '#f43f5e', iris: '#6366f1', dark: '#07080b', card: '#10131c' }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#07080b] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-black">
+
+  <div class="ambient-glow glow-amber w-[450px] h-[450px] -top-32 -left-32 opacity-20"></div>
+  <div class="ambient-glow glow-flame w-[550px] h-[550px] top-[400px] -right-32 opacity-15"></div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#07080b]/90 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center text-black font-black text-lg shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          MB
+        </div>
+        <div>
+          <div class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+            M Basharat <span class="status-dot"></span>
+          </div>
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider uppercase">AI Automation & Agent Architect</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-amber-400 transition-colors">Home</a>
+        <a href="case-studies.html" class="text-slate-300 hover:text-amber-400 transition-colors">Case Studies</a>
+        <a href="workflow-engine.html" class="text-slate-300 hover:text-amber-400 transition-colors">n8n Workflows</a>
+        <a href="simulator.html" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Live Simulator
+        </a>
+        <a href="services.html" class="text-amber-400 font-bold border-b-2 border-amber-400 pb-1">Services</a>
+        <a href="about.html" class="text-slate-300 hover:text-amber-400 transition-colors">About</a>
+        <a href="contact.html" class="text-slate-300 hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/923442694114" target="_blank" class="btn-secondary-glass px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-amber-400"></i> WhatsApp
+        </a>
+        <a href="contact.html" class="btn-primary-solar px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+          <span>Book Call</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-white/10 bg-[#0c0e15] px-6 py-6 space-y-2">
+      <a href="index.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Home</a>
+      <a href="case-studies.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Case Studies</a>
+      <a href="workflow-engine.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">n8n Workflows</a>
+      <a href="simulator.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Live Simulator</a>
+      <a href="services.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-amber-400 font-bold bg-amber-500/10">Services</a>
+      <a href="about.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">About</a>
+      <a href="contact.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="py-12 sm:py-16 bg-[#090b12]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <div class="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> Production Capabilities
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            AI Automation Services & Solutions
+          </h1>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Bespoke AI systems built for high-throughput enterprises, healthcare practices, and fast-growing startups.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5">
+                <i data-lucide="phone-forwarded" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Autonomous AI Voice Agents</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                24/7 inbound & outbound voice agents powered by Retell AI, Vapi, and GPT-4o. Screen callers, book calendar slots, and sync CRM records in sub-second latency.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Dental & Medical Clinic Triage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Real-time Google Calendar locking</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Twilio SIP & WebRTC infrastructure</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-amber-400 flex items-center gap-1.5 hover:text-amber-300 pt-2 border-t border-white/10">
+              Discuss Voice Agent <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-5">
+                <i data-lucide="workflow" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Enterprise n8n Orchestration</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                Self-hosted and cloud n8n architectures connecting your entire stack. Complete with webhook HMAC verification, error handlers, and zero vendor lock-in.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Self-hosted for HIPAA/GDPR data privacy</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> Multi-tool CRM synchronization</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-orange-400"></i> 99.5%+ uptime guaranteed</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-orange-400 flex items-center gap-1.5 hover:text-orange-300 pt-2 border-t border-white/10">
+              Discuss n8n Workflows <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-5">
+                <i data-lucide="zap" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Lead Acceleration & CRM Swarms</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                Respond to high-ticket leads in under 45 seconds. Automatically enriches company firmographics via Apollo.io and scores buyer intent via Claude 3.5 Sonnet.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Apollo.io & LinkedIn enrichment</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> GoHighLevel, HubSpot & Salesforce</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> VIP Calendly SMS dispatch</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-indigo-400 flex items-center gap-1.5 hover:text-indigo-300 pt-2 border-t border-white/10">
+              Deploy Lead Swarm <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-5">
+                <i data-lucide="file-check-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Multimodal Document & Invoice AI</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                Parse messy PDF invoices, bills of lading, and receipts with multimodal Vision models. Automatically matches purchase orders with human-in-the-loop fallback.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> 99.8% Extraction Accuracy</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> Telegram / Slack approval buttons</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> Xero & QuickBooks integration</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-rose-400 flex items-center gap-1.5 hover:text-rose-300 pt-2 border-t border-white/10">
+              Process Invoices <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5">
+                <i data-lucide="database" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Custom RAG Knowledge Bases</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                Equip your internal team and customer bots with grounded knowledge using vector databases (Supabase, Pinecone) so LLMs answer using only verified company documents.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Zero hallucination guardrails</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Google Drive & Notion sync</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Source citation verified</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-amber-400 flex items-center gap-1.5 hover:text-amber-300 pt-2 border-t border-white/10">
+              Build Knowledge Base <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Custom Python & FastAPI Services</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                When no-code limits are reached, I build custom Python microservices, FastAPI endpoints, and bespoke scrapers to bridge legacy systems with modern AI.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-1.5 font-mono mb-4">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> FastAPI / Flask microservices</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Docker container deployments</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Custom API middleware</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="text-xs font-bold text-purple-400 flex items-center gap-1.5 hover:text-purple-300 pt-2 border-t border-white/10">
+              Build Custom Code <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Interactive ROI Calculator -->
+        <div class="glass-panel rounded-3xl p-8 border border-white/10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5">
+              <div class="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold mb-2">ROI Calculator</div>
+              <h2 class="text-2xl font-bold text-white mb-3">Estimate Your Financial Payback</h2>
+              <p class="text-xs sm:text-sm text-slate-300 mb-6">
+                Enter your manual team hours to see monthly dollar savings and hours reclaimed.
+              </p>
+
+              <form onsubmit="calculateAutomationROI(event)" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Weekly manual task hours:</label>
+                  <input type="number" id="calc-hours" value="20" min="1" max="200" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-amber-400">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Average staff rate ($/hr):</label>
+                  <input type="number" id="calc-rate" value="30" min="5" max="500" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-amber-400">
+                </div>
+
+                <button type="submit" class="btn-primary-solar w-full py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i> Calculate ROI Savings
+                </button>
+              </form>
+            </div>
+
+            <div class="lg:col-span-7" id="calc-result">
+              <div class="bg-black/30 p-8 rounded-2xl border border-white/5 text-center">
+                <div class="text-sm font-bold text-white mb-1">Click "Calculate ROI Savings"</div>
+                <div class="text-xs text-slate-400">Instant projections for monthly savings and hours reclaimed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/[0.06] py-10 bg-[#050608] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">MB</div>
+        <span>&copy; 2026 M Basharat. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+        <a href="case-studies.html" class="hover:text-amber-400 transition-colors">Case Studies</a>
+        <a href="workflow-engine.html" class="hover:text-amber-400 transition-colors">Workflows</a>
+        <a href="simulator.html" class="hover:text-amber-400 transition-colors">AI Simulator</a>
+        <a href="services.html" class="text-amber-400">Services</a>
+        <a href="about.html" class="hover:text-amber-400 transition-colors">About</a>
+        <a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

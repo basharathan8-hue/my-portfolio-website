@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live AI Simulator | M Basharat - AI Automation Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { amber: '#f59e0b', gold: '#fbbf24', flame: '#ff5722', rose: '#f43f5e', iris: '#6366f1', dark: '#07080b', card: '#10131c' }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- React 18 & ReactDOM via CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body class="bg-[#07080b] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-black">
+
+  <div class="ambient-glow glow-amber w-[450px] h-[450px] -top-32 -left-32 opacity-20"></div>
+  <div class="ambient-glow glow-flame w-[550px] h-[550px] top-[400px] -right-32 opacity-15"></div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#07080b]/90 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 flex items-center justify-center text-black font-black text-lg shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          MB
+        </div>
+        <div>
+          <div class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+            M Basharat <span class="status-dot"></span>
+          </div>
+          <div class="text-xs text-amber-400/90 font-mono tracking-wider uppercase">AI Automation & Agent Architect</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-amber-400 transition-colors">Home</a>
+        <a href="case-studies.html" class="text-slate-300 hover:text-amber-400 transition-colors">Case Studies</a>
+        <a href="workflow-engine.html" class="text-slate-300 hover:text-amber-400 transition-colors">n8n Workflows</a>
+        <a href="simulator.html" class="text-amber-400 font-bold border-b-2 border-amber-400 pb-1 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Live Simulator
+        </a>
+        <a href="services.html" class="text-slate-300 hover:text-amber-400 transition-colors">Services</a>
+        <a href="about.html" class="text-slate-300 hover:text-amber-400 transition-colors">About</a>
+        <a href="contact.html" class="text-slate-300 hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/923442694114" target="_blank" class="btn-secondary-glass px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-amber-400"></i> WhatsApp
+        </a>
+        <a href="contact.html" class="btn-primary-solar px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+          <span>Book Call</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-white/10 bg-[#0c0e15] px-6 py-6 space-y-2">
+      <a href="index.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Home</a>
+      <a href="case-studies.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Case Studies</a>
+      <a href="workflow-engine.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">n8n Workflows</a>
+      <a href="simulator.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-amber-400 font-bold bg-amber-500/10">Live Simulator</a>
+      <a href="services.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Services</a>
+      <a href="about.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">About</a>
+      <a href="contact.html" class="mobile-nav-link block p-2 rounded-lg text-sm font-medium text-slate-300 hover:text-amber-400">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-10">
+          <div class="text-xs font-mono text-amber-400 uppercase tracking-widest font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="terminal" class="w-4 h-4"></i> Interactive Agent Simulator (Powered by React & State Engine)
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Test Autonomous AI Reasoning In Real-Time
+          </h1>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Choose a scenario, trigger the execution loop, and watch the agent formulate sub-second thoughts, call external APIs, and return structured outcomes.
+          </p>
+        </div>
+
+        <!-- React Mount Root -->
+        <div id="react-simulator-root"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/[0.06] py-10 bg-[#050608] mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">MB</div>
+        <span>&copy; 2026 M Basharat. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+        <a href="case-studies.html" class="hover:text-amber-400 transition-colors">Case Studies</a>
+        <a href="workflow-engine.html" class="hover:text-amber-400 transition-colors">Workflows</a>
+        <a href="simulator.html" class="text-amber-400">AI Simulator</a>
+        <a href="services.html" class="hover:text-amber-400 transition-colors">Services</a>
+        <a href="about.html" class="hover:text-amber-400 transition-colors">About</a>
+        <a href="contact.html" class="hover:text-amber-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/react-agent-simulator.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.initReactAgentSimulator) {
+        window.initReactAgentSimulator('react-simulator-root');
+      }
+    });
+  </script>
+</body>
+</html>

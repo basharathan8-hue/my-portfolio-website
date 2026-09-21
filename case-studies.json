@@ -1,0 +1,105 @@
+[
+  {
+    "id": "dental-voice-agent",
+    "title": "Autonomous AI Voice Receptionist & Emergency Triage System",
+    "clientIndustry": "Healthcare & Dental Clinics",
+    "timeline": "3 Weeks",
+    "role": "End-to-End AI Automation Architect",
+    "techStack": ["Retell AI", "Vapi", "n8n (Self-Hosted)", "OpenAI GPT-4o", "Google Calendar API", "Twilio SMS", "Supabase"],
+    "metrics": [
+      { "label": "Missed Call Recovery", "value": "82%", "subtext": "After-hours & peak surge callers converted" },
+      { "label": "Voice Turn Latency", "value": "<750ms", "subtext": "Human-like fluid conversation speed" },
+      { "label": "Staff Hours Saved", "value": "24 hrs/wk", "subtext": "Eliminated routine telephone phone-tag" },
+      { "label": "Booking Accuracy", "value": "99.8%", "subtext": "Zero calendar double-bookings over 6 mos" }
+    ],
+    "summary": "Designed and deployed an intelligent 24/7 autonomous voice receptionist for multi-location dental practices. The system handles inbound patient calls, screens acute vs. routine dental emergencies, cross-references doctor availability in real time, books appointments with instant SMS confirmation, and writes full transcript summaries into the clinic's CRM.",
+    "problem": "The clinic was losing an estimated $14,000/month in missed dental procedures due to staff being busy with chair-side patients or calls coming in during evenings and weekends. Outdated IVRs led to high hang-up rates (41%) and patient frustration.",
+    "solution": "Constructed an ultra-low latency voice agent using Retell AI / Vapi with a custom system prompt engineered for medical empathy and triage. The voice agent executes real-time function calls to self-hosted n8n webhooks to check practitioner calendars, book appointments, send Twilio SMS confirmations, and synchronize records into Supabase and GoHighLevel.",
+    "architectureSteps": [
+      { "step": "1. Inbound Call Ingestion", "desc": "Twilio SIP trunk forwards call stream to Retell AI / Vapi voice engine with low-latency WebRTC connection." },
+      { "step": "2. Speech-to-Text & Intent Triage", "desc": "Deepgram Nova-2 transcribes caller speech; GPT-4o classifies intent (Emergency toothache, Routine cleaning, Rescheduling, Billing inquiry)." },
+      { "step": "3. n8n Dynamic Function Calling", "desc": "When patient requests a time slot, the agent calls n8n webhook: /api/v1/check-availability with doctor ID and desired date." },
+      { "step": "4. Calendar Verification & Locking", "desc": "n8n queries Google Calendar API, detects open slots, applies a 10-minute temporary soft lock, and returns human-readable slot options to the voice agent." },
+      { "step": "5. Confirmation & Omni-Channel Sync", "desc": "Once verbal agreement is reached, n8n commits the appointment, fires an instant Twilio SMS with clinic address & intake form link, and writes the call transcript and audio recording link into the CRM." }
+    ],
+    "samplePayload": {
+      "call_id": "call_retell_89234ba",
+      "caller_phone": "+1 (555) 234-8901",
+      "triage_category": "Emergency / Acute Pain",
+      "patient_name": "Sarah Jenkins",
+      "booked_slot": "2026-09-24T10:30:00Z",
+      "doctor_assigned": "Dr. Aris Vance (General Dentistry)",
+      "sms_confirmation_status": "DELIVERED",
+      "sentiment_score": "Relieved (+0.84)"
+    }
+  },
+  {
+    "id": "lead-triage-enrichment",
+    "title": "Autonomous Multi-Channel Lead Triage & Enrichment Swarm",
+    "clientIndustry": "B2B SaaS & Commercial Real Estate",
+    "timeline": "2 Weeks",
+    "role": "Lead Systems & Workflow Engineer",
+    "techStack": ["n8n Enterprise", "Claude 3.5 Sonnet", "Apollo.io API", "GoHighLevel CRM", "Slack Webhooks", "PostgreSQL"],
+    "metrics": [
+      { "label": "Lead Response Time", "value": "38 Seconds", "subtext": "Reduced from average 4.2 hours" },
+      { "label": "Sales Meeting Rate", "value": "+36%", "subtext": "Higher booked meetings from warm leads" },
+      { "label": "Manual Data Entry", "value": "0 Hours", "subtext": "100% automated CRM enrichment" },
+      { "label": "Qualification Precision", "value": "95.4%", "subtext": "Benchmarked against senior SDR reviews" }
+    ],
+    "summary": "Built an intelligent lead acceleration pipeline that captures inbound inquiries from web forms, WhatsApp, and email, enriches company headcount and revenue data via Apollo.io, scores lead intent (0-100) using Claude 3.5 Sonnet, and executes priority-based dispatch within 45 seconds.",
+    "problem": "Sales reps were overwhelmed by hundreds of low-intent submissions, taking up to 6 hours to respond to high-value enterprise prospects. In the B2B space, responding within 5 minutes increases conversion rates by 8x.",
+    "solution": "Engineered an event-driven n8n pipeline. As soon as a lead submits their details, n8n validates the domain, fetches company firmographics via Apollo.io API, prompts Claude 3.5 Sonnet to score budget, authority, and urgency, and dynamically routes tier-1 accounts directly to account executives with a pre-filled Calendly link and personalized outreach email draft.",
+    "architectureSteps": [
+      { "step": "1. Multi-Channel Webhook Listener", "desc": "Ingests leads from Webflow forms, WhatsApp Cloud API, and inbound sales emails." },
+      { "step": "2. Data Sanitization & Enrichment", "desc": "Validates business email syntax, prevents disposable addresses, and calls Apollo.io to retrieve company revenue, tech stack, and LinkedIn profile." },
+      { "step": "3. Claude 3.5 Sonnet Intent Scoring", "desc": "Evaluates user query and firmographics against ideal customer profile (ICP) rubric, outputting numerical score (1-100), key pain points, and recommended strategy." },
+      { "step": "4. Intelligent Conditional Routing", "desc": "Score >= 75 (Tier 1): Instant Slack notification to assigned AE + VIP SMS with priority scheduling link. Score < 75: Enrolled into automated educational email nurture sequence in GoHighLevel." },
+      { "step": "5. Automated Draft Generation", "desc": "Pre-writes a context-rich first email reply citing the prospect's company details for rep approval." }
+    ],
+    "samplePayload": {
+      "lead_email": "marcus.v@acmecorporation.com",
+      "company_name": "Acme Global Solutions",
+      "headcount": 280,
+      "annual_revenue": "$45M",
+      "icp_score": 94,
+      "urgency_level": "High - Seeking Q4 Deployment",
+      "assigned_rep": "David Miller",
+      "slack_alert_delivered": true,
+      "vip_booking_link_dispatched": true
+    }
+  },
+  {
+    "id": "invoice-document-processor",
+    "title": "Autonomous Invoice & Claims Vision Processor (HITL Escalation)",
+    "clientIndustry": "Logistics, Supply Chain & Insurance",
+    "timeline": "4 Weeks",
+    "role": "AI Architect & n8n Specialist",
+    "techStack": ["n8n Workflow Engine", "Claude 3.5 Sonnet Vision", "Supabase Vector / PG", "Telegram Bot API", "Gmail IMAP", "Xero / QuickBooks API"],
+    "metrics": [
+      { "label": "Straight-Through Rate", "value": "94.2%", "subtext": "Processed with zero human touch" },
+      { "label": "Processing Cycle Time", "value": "90 Seconds", "subtext": "Down from 72 hours manual turnaround" },
+      { "label": "Data Extraction Accuracy", "value": "99.8%", "subtext": "Verified against audited reconciliation logs" },
+      { "label": "Cost Savings", "value": "$3,200/mo", "subtext": "Saved operational back-office expenses" }
+    ],
+    "summary": "Developed an autonomous multimodal document processing pipeline in n8n that reads incoming PDF invoices and insurance claim receipts, extracts line-item structured data with Claude 3.5 Sonnet Vision, validates totals against ERP purchase orders, and escalates edge cases to Telegram with interactive one-click approval buttons.",
+    "problem": "The accounting and claims department spent over 35 hours weekly manually copying data from messy PDF attachments, mobile phone photos of receipts, and disparate billing formats, leading to duplicate payments and late supplier fees.",
+    "solution": "Constructed an event-driven system where n8n monitors an IMAP inbox, streams PDF documents to Claude 3.5 Sonnet Vision with JSON Schema constraints, checks tax totals and PO matches in PostgreSQL, and automatically publishes valid entries into accounting software. Unmatched or anomalous invoices (>5% discrepancy) instantly ping managers via Telegram with clickable 'Approve', 'Flag', or 'Reject' inline actions.",
+    "architectureSteps": [
+      { "step": "1. Inbound Document Detection", "desc": "n8n IMAP node polls billing inbox for unread messages containing PDF or image attachments." },
+      { "step": "2. Preprocessing & Vision OCR", "desc": "Converts multi-page PDFs to base64 images and invokes Claude 3.5 Sonnet Vision with strict structured JSON schema." },
+      { "step": "3. Line-Item Extraction & Validation", "desc": "Extracts vendor tax ID, line items, unit prices, VAT, and invoice totals with line-item mathematical cross-checks." },
+      { "step": "4. ERP & Database Reconciliation", "desc": "Queries PostgreSQL database to match PO numbers and check for duplicate invoice IDs." },
+      { "step": "5. Human-in-the-Loop (HITL) Telegram Escalation", "desc": "If confidence score is < 95% or price variance > 5%, n8n posts an interactive Telegram card with preview thumbnail and inline approval buttons; once clicked, n8n resumes execution." }
+    ],
+    "samplePayload": {
+      "invoice_number": "INV-2026-9041",
+      "vendor_name": "Apex Logistics Express",
+      "total_amount": 8450.00,
+      "currency": "USD",
+      "po_match_status": "MATCHED (PO-8812)",
+      "confidence_score": 0.992,
+      "reconciliation_decision": "AUTO_APPROVED",
+      "accounting_sync_timestamp": "2026-09-21T14:22:10Z"
+    }
+  }
+]
